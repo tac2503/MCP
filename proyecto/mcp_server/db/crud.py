@@ -16,4 +16,4 @@ def get_user_email(db: SessionLocal, email: str):
 
 def get_users(db: SessionLocal):
     users = db.query(Usuario).all()
-    return users
+    return users if users else None

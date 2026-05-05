@@ -15,7 +15,14 @@ Responde SOLO en JSON válido:
     "param1": "valor"
   }
 }
-
+IMPORTANTE:
+SI LA TOOL QUE VAS A EJECUTAR ES get_all_users EL JSON SE DEBE VER ASÍ:
+{
+  "tool:"nombre_de_la_tool",
+  "arguments": {
+    
+  }
+}
 ---
 
 REGLAS IMPORTANTES:
