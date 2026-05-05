@@ -31,7 +31,7 @@ def run_agent(user_input:str):
             
             return generate_response(final_prompt)
     except json.JSONDecodeError as e:
-        print(e)
+        
         return response
     return response
 

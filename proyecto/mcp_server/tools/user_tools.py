@@ -20,11 +20,12 @@ def create_new_user(nombre: str, email: str):
 
 def get_all_users():
     users = get_users(SessionLocal())
-   
-        
-    return {
-        "usuarios":[
-            {"nombre": user.nombre, "email": user.email} for user in users
-        ]
-    }
+
+    if users:   
+        return {
+            "usuarios":[
+                {"nombre": user.nombre, "email": user.email} for user in users
+            ]
+        }
+    return None
 
