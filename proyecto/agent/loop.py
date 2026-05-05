@@ -15,6 +15,7 @@ def run_agent(user_input:str):
         #print(response,file=sys.stderr)
         
         if "tool" in data:
+            
             tool_name = data["tool"]
             arguments = data.get("arguments", {})
             
@@ -29,7 +30,8 @@ def run_agent(user_input:str):
             """
             
             return generate_response(final_prompt)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        print(e)
         return response
     return response
 

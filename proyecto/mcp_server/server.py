@@ -58,6 +58,7 @@ async def handle_tool_call(name: str, arguments: dict):
         return [TextContent(type="text", text=json.dumps(result))]
     elif name == "get_all_users":
         result = user_tools.get_all_users()
+        
         return [TextContent(type="text", text=json.dumps(result))]
     else:
         return [TextContent(type="text", text=json.dumps({"error": "Tool not found"}))]
